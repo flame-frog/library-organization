@@ -1,8 +1,7 @@
 CREATE DATABASE library;
 USE library;
 -- 书籍信息
-CREATE TABLE book
-(
+CREATE TABLE book(
     bookNo varchar(10) primary key,
     bookName varchar(20)not null ,
     importDate date not null ,
@@ -18,7 +17,7 @@ CREATE TABLE admin
 (
     adminname varchar(10) primary key,
     password varchar(10) not null
-);
+)
 
 -- 读者信息
 CREATE TABLE reader
@@ -39,15 +38,14 @@ CREATE TABLE borrowBook
 );
 
 -- 归还信息
-CREATE TABLE returnBook
-(
+CREATE TABLE returnBook(
     serialNumber varchar(10) primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null,
     returnDate date not null,
     foreign key (readerNo) references reader(readerNo),
     foreign key (bookNo) references book(bookNo)
-);
+) ;
 
 -- 罚款信息
 CREATE TABLE fine
@@ -59,7 +57,7 @@ CREATE TABLE fine
     lossResult varchar(20) not null,
     foreign key (readerNo) references reader(readerNo),
     foreign key (bookNo) references book(bookNo)
-);
+)
 
 -- 遗失信息
 CREATE TABLE loss
@@ -68,4 +66,4 @@ CREATE TABLE loss
     lossResult varchar(20) not null,
     recordDate date not null,
     foreign key (bookNo) references book(bookNo)
-);
+)
