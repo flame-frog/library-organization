@@ -15,7 +15,7 @@ CREATE TABLE book(
 -- 管理员信息
 CREATE TABLE admin
 (
-    adminname varchar(10) primary key unique,
+    adminname varchar(10) primary key,
     password varchar(10) not null
 )
 
@@ -29,7 +29,7 @@ CREATE TABLE reader
 -- 借阅信息
 CREATE TABLE borrowBook
 (
-    serialNumber varchar(10) primary key unique,
+    serialNumber varchar(10) primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null unique,
     borrowDate date not null,
@@ -39,7 +39,7 @@ CREATE TABLE borrowBook
 
 -- 归还信息
 CREATE TABLE returnBook(
-    serialNumber varchar(10) primary key unique,
+    serialNumber varchar(10) primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null,
     returnDate date not null,
@@ -50,7 +50,7 @@ CREATE TABLE returnBook(
 -- 罚款信息
 CREATE TABLE fine
 (
-    serialNumber varchar(10) primary key unique,
+    serialNumber varchar(10) primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null,
     fine float(2) check (fine>=0),
