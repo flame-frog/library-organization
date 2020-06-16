@@ -40,7 +40,7 @@
 
 <body>
     <div class="head">推荐书单</div>
-    <form method="POST" action="booksort.html"><!--action有待修改 -->
+    <form method="POST" action="recommend01.php">
         <span class="select" style="letter-spacing: 32px;"><input type="radio" name="gender" value="hot"
                 checked="checked" id="hot"><label for="hot">热度</label></span>
         <span class="select"><input type="radio" name="gender" value="latest" id="latest"><label
