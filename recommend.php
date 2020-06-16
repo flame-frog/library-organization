@@ -25,7 +25,7 @@
 
         .button {
             border: none;
-            background-color: darkred;
+            background-color: #892844;
             width: 80px;
             padding: 10px 10px;
             color: white;
@@ -40,10 +40,10 @@
 
 <body>
     <div class="head">推荐书单</div>
-    <form method="POST" action="booksort.html"><!--action有待修改 -->
-        <span class="select" style="letter-spacing: 32px;"><input type="radio" name="gender" value="hot"
+    <form method="POST" action="recommend_backend.php">
+        <span class="select" style="letter-spacing: 32px;"><input type="radio" name="type" value="hot"
                 checked="checked" id="hot"><label for="hot">热度</label></span>
-        <span class="select"><input type="radio" name="gender" value="latest" id="latest"><label
+        <span class="select"><input type="radio" name="type" value="latest" id="latest"><label
                 for="latest">最新入库</label></span><br>
         <input class="button" type="submit" name="search" value="生成书单">
     </form>

@@ -30,7 +30,7 @@ CREATE TABLE reader
 -- 借阅信息
 CREATE TABLE borrowBook
 (
-    serialNumber varchar(10) primary key,
+    serialNumber unsigned int primary key AUTO_INCREMENT,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null unique,
     borrowDate date not null,
@@ -41,7 +41,7 @@ CREATE TABLE borrowBook
 -- 归还信息
 CREATE TABLE returnBook
 (
-    serialNumber varchar(10) primary key,
+    serialNumber unsigned int primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null,
     returnDate date not null,
@@ -53,13 +53,14 @@ CREATE TABLE returnBook
 -- 罚款信息
 CREATE TABLE fine
 (
-    serialNumber varchar(10) primary key,
+    serialNumber unsigned int primary key,
     readerNo varchar(10) not null,
     bookNo varchar(10) not null,
     fine float(2) check (fine>=0),
     lossResult varchar(20) not null,
     foreign key (readerNo) references reader(readerNo),
     foreign key (bookNo) references book(bookNo)
+    -- TODO: 罚款流水号和借阅流水号一一对应，但是考虑到编程难度，暂时没有增加外码依赖
 );
 
 -- 遗失信息
