@@ -1,13 +1,16 @@
 <?php
-$readerNo=$_REQUEST['readerNo'];
-$readerName=$_REQUEST['readerName'];
+$bookNo=$_REQUEST['bookNo'];
+$lossResult=$_REQUEST['lossResult'];
+date_default_timezone_set(PRC);//设置为北京时间
+$recordDate=date("Y-m-d");//自动获取时间(年月日)
+
 $mysqli = mysqli_connect("localhost", "root", "", "library");
 if (mysqli_connect_errno($mysqli)) {
     die("Failed to connect to MySQL: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 } else
     echo 'sucessful to connect to MySQL!<br/>';
-//插入读者信息命令
-$demand = "INSERT INTO reader values('$readerNo','$readerName')";
+//插入书籍归还信息命令
+$demand = "INSERT INTO loss values('$bookNo','$lossResult''$recordDate')";
 $res=mysqli_query($mysqli,$demand);
 if ($res) {
     echo "Insert sucessfully!<br/>";

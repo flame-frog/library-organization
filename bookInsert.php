@@ -8,7 +8,7 @@ $bookPrice=$_REQUEST['bookPrice'];//书籍价格(2位小数点)
 $frequ=$_REQUEST['frequency'];//借书频率
 $category=$_REQUEST['category'];//书籍种类
 
-$mysqli = mysqli_connect("localhost", "root", "q123654987", "library");
+$mysqli = mysqli_connect("localhost", "root", "", "library");
 if (mysqli_connect_errno($mysqli)) {
     die("Failed to connect to MySQL: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 } else
