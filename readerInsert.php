@@ -1,7 +1,7 @@
 <?php
 $readerNo=$_REQUEST['readerNo'];
 $readerName=$_REQUEST['readerName'];
-$mysqli = mysqli_connect("localhost", "root", "", "library");
+$mysqli = mysqli_connect("localhost", "root", "q123654987", "library");
 if (mysqli_connect_errno($mysqli)) {
     die("Failed to connect to MySQL: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 } else
