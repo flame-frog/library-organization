@@ -1,7 +1,7 @@
 <?php
 $admin = $_REQUEST['adminname'];
 $password = $_REQUEST['password'];
-$mysqli = mysqli_connect("localhost", "root", "q123654987", "admin");
+$mysqli = mysqli_connect("localhost", "root", "", "library");
 if (mysqli_connect_errno($mysqli)) {
     die("Failed to connect to MySQL: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 } else
