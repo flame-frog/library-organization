@@ -72,7 +72,7 @@
 <table class="tablepos">
 <tr>  <td> <a href="inlib" >查询图书在馆状态</a> </td>  <td><a href="addreader.php">新增读者</a></td>  <td><a href="xiajia.php">过遗下架</a></td>  </tr>
 <tr>  <td> <a href="bookhis.php">查询图书借阅历史</a></td>  <td><a href="addbook.php">上架新书</a></td>  <td><a href="fine.php">逾期罚款</a></td>  </tr>
-<tr>  <td> <a href="readerhis.php">查询读者借阅记录</a></td>  <td><a href="recommand.php">热书推荐</a></td>  <td><a href="xiuli.php">破损修理</a></td>  </tr>
+<tr>  <td> <a href="readerhis.php">查询读者借阅记录</a></td>  <td><a href="recommend.php">热书推荐</a></td>  <td><a href="xiuli.php">破损修理</a></td>  </tr>
 <tr>  <td> <a href="borrow.php">借阅图书</a></td>  <td><a href="back.php">归还图书</a></td><td></td></tr>
 </table>
 

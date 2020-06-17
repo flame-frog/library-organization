@@ -19,10 +19,12 @@ if($type=='latest')
 	echo"<tr align='center'>新书书单</tr>";
 	echo"<tr><td>图书名</td><td>图书类别</td><td>上架时间</td></tr>";
 }
-$res=mysqli_query($conn,$str);
-while($row==mysqli_fetch_row($res))
+if($res=mysqli_query($conn,$str))
 {
-	echo '<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>';
+	while($row=mysqli_fetch_row($res))
+	{
+		echo '<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>';
+	}
 }
 
 echo "</table>";

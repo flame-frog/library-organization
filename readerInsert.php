@@ -5,12 +5,12 @@ $mysqli = mysqli_connect("localhost", "root", "q123654987", "library");
 if (mysqli_connect_errno($mysqli)) {
     die("Failed to connect to MySQL: (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 } else
-    echo 'sucessful to connect to MySQL!<br/>';
+    echo 'successful to connect to MySQL!<br/>';
 //插入读者信息命令
 $demand = "INSERT INTO reader values('$readerNo','$readerName')";
 $res=mysqli_query($mysqli,$demand);
 if ($res) {
-    echo "Insert sucessfully!<br/>";
+    echo "Insert successfully!<br/>";
 } else {
     echo "Insert failed!<br/>";
 }
