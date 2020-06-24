@@ -77,7 +77,7 @@
 	// 表格输出结束
 	echo "<div class='bottom'><br><a href='Bstate.php'>返回上一页</a></br>";
 	echo "<a href='main.php'><br>回到首页</a></br><div>";
-	mysqli_close($conn);  //还差美化界面
+	mysqli_close($conn);  
 	?>
 </body>
 
