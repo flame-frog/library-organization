@@ -28,7 +28,7 @@
             background-color: rgb(173, 169, 129);
             margin: 0px auto;
             width: 400px;
-            height: 300px;
+            height: 285px;
             position: relative;
         }
 
@@ -62,7 +62,7 @@
 
         .submit {
             position: absolute;
-            top: 200px;
+            top: 210px;
             left: 160px;
         }
 
