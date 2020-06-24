@@ -60,7 +60,6 @@ CREATE TABLE fine
     lossResult varchar(20) not null,
     foreign key (readerNo) references reader(readerNo),
     foreign key (bookNo) references book(bookNo)
-    -- TODO: 罚款流水号和借阅流水号一一对应，但是考虑到编程难度，暂时没有增加外码依赖
 );
 
 -- 遗失信息
